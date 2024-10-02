@@ -83,15 +83,15 @@ public class Main {
 		while(!q.isEmpty()) {
 			
 			// 하나를 꺼내서 확인하고 추출
-			v = q.poll();
-			sb.append(v).append(" ");
+			int curr = q.poll();
+			sb.append(curr).append(" ");
 			
 			
 			// 현재 지점과 연결된 것들을 순회
 			for(int i = 1; i <= N; i++) {
 				
 				// 방문하지 않은 것들을 추출하고 방문체크
-				if(!visited[i] && adj[v][i] == 1) {
+				if(!visited[i] && adj[curr][i] == 1) {
 					q.add(i);
 					visited[i] = true;
 				}
